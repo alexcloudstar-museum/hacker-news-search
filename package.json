@@ -1,6 +1,6 @@
 {
   "name": "hacker-news-search",
-  "homepage": "https://alexcloudstar.github.io/Hacker-News-Search/",
+  "homepage": "https://alexcloudstar.github.io/hacker-news-search/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
