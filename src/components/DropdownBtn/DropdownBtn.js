@@ -4,7 +4,6 @@ import "./Dropdown.scss";
 import Dropdown from "react-bootstrap/Dropdown";
 
 const DropdownBtn = props => {
-  // console.log(props);
   return (
     <Dropdown className="Dropdown">
       <Dropdown.Toggle variant="danger" id="dropdown-basic">
