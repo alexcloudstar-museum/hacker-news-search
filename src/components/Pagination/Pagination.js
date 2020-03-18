@@ -4,7 +4,10 @@ import "./Pagination.scss";
 
 const renderPagination = props => {
   let items = [];
-  for (let i = 1; i <= Math.ceil(props.totalPosts / props.hitsPerPage); i++) {
+  let odd = Math.ceil(props.totalPosts / props.hitsPerPage);
+  odd = odd % 2 ? odd -1 : odd;
+
+  for (let i = 1; i <= odd; i++) {
     items.push(
       <Pagination.Item
         key={i}

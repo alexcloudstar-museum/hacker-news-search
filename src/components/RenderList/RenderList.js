@@ -5,8 +5,6 @@ import Comments from "../Comments/Comments";
 import Comment from "../Comments/Comment";
 
 import moment from "moment";
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
 
 // libs
 import Button from "react-bootstrap/Button";
@@ -25,10 +23,6 @@ class RenderList extends React.Component {
     };
   }
 
-  componentDidUpdate() {
-    //
-  }
-
   resetStateState = () => {
     this.setState({ startDate: null, endDate: null });
   };
@@ -38,12 +32,13 @@ class RenderList extends React.Component {
     if (this.props.lastPost !== "All Time") {
       switch (this.props.lastPost) {
         case "Last 24h":
-          if (this.props.currentList === "Stories") {
+          if (this.props.currentList === "Stories" || this.props.currentList === 'All') {
             return (
               <React.Fragment>
                 {lastPosts.map(post => (
                   <Post
                     key={post.id}
+                    id={post.id}
                     title={post.title}
                     url={post.url}
                     points={post.points}
@@ -70,12 +65,13 @@ class RenderList extends React.Component {
             );
           }
         case "Past Week":
-          if (this.props.currentList === "Stories") {
+          if (this.props.currentList === "Stories" || this.props.currentList === 'All') {
             return (
               <React.Fragment>
                 {lastPosts.map(post => (
                   <Post
                     key={post.id}
+                    id={post.id}
                     title={post.title}
                     url={post.url}
                     points={post.points}
@@ -102,12 +98,13 @@ class RenderList extends React.Component {
             );
           }
         case "Past Month":
-          if (this.props.currentList === "Stories") {
+          if (this.props.currentList === "Stories" || this.props.currentList === 'All') {
             return (
               <React.Fragment>
                 {lastPosts.map(post => (
                   <Post
                     key={post.id}
+                    id={post.id}
                     title={post.title}
                     url={post.url}
                     points={post.points}
@@ -132,14 +129,15 @@ class RenderList extends React.Component {
                 ))}
               </React.Fragment>
             );
-          }
+          };
         case "Past Year":
-          if (this.props.currentList === "Stories") {
+          if (this.props.currentList === "Stories" || this.props.currentList === 'All') {
             return (
               <React.Fragment>
                 {lastPosts.map(post => (
                   <Post
                     key={post.id}
+                    id={post.id}
                     title={post.title}
                     url={post.url}
                     points={post.points}
@@ -167,7 +165,7 @@ class RenderList extends React.Component {
           }
         case "Custom Range":
           if (this.state.startDate && this.state.endDate) {
-            if (this.props.currentList === "Stories") {
+            if (this.props.currentList === "Stories" || this.props.currentList === 'All') {
               return this.props.posts.map(post => {
                 if (
                   moment(this.state.startDate).format("YYYY-MM-DD") <=
@@ -178,6 +176,7 @@ class RenderList extends React.Component {
                     <React.Fragment>
                       <Post
                         key={post.id}
+                        id={post.id}
                         title={post.title}
                         url={post.url}
                         points={post.points}
@@ -277,7 +276,7 @@ class RenderList extends React.Component {
                 posts={this.props.posts}
                 searchTerm={this.props.searchTerm}
                 currentBy={this.props.currentBy}
-                />
+              />
               <Comments
                 comments={this.props.comments}
                 searchTerm={this.props.searchTerm}
