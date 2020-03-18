@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 import Settings from "./Pages/Settings/Settings";
 import About from "./Pages/About/About";
@@ -423,7 +423,7 @@ class App extends React.Component {
     } else {
       return (
         <div className="App">
-          <Router>
+          <Router basename='/'>
             <Container>
               <Row>
                 <Col sm={12} className="bg-grey">
