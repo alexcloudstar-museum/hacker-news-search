@@ -1,0 +1,43 @@
+.Comment {
+  padding: 0 20px;
+  margin: 15px 0;
+
+  .header {
+    line-height: 2;
+
+    h4 {
+      color: #5799b9;
+      margin-right: .5em;
+      margin-bottom: 0;
+    }
+
+    span {
+      color: #51839c;
+    }
+  }
+
+  .stats {
+    span {
+      color: #51839c;
+      position: relative;
+      margin-right: 5px;
+      
+      &:not(:first-child) {
+        margin: 0 5px;
+      }
+
+      &:not(:last-child) {
+          &:after {
+            content: "|";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            margin-left: 3px;
+          }
+        }
+      }
+
+  }
+}
