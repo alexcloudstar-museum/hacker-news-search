@@ -31,10 +31,11 @@ a {
 }
 
 .truncate {
-  width: 250px;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  width: 250px;
+  display: block;
+  overflow: hidden
 }
 
 @media (max-width: 767px) {
