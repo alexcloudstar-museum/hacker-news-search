@@ -1,48 +1,53 @@
 {
-  "name": "hacker-news-search",
-  "homepage": "https://alexcloudstar.github.io/hacker-news-search/",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.4.1",
-    "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
-    "react": "^16.12.0",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-datepicker": "^2.13.0",
-    "react-dates": "^21.8.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  }
+	"name": "react-typescript-webpack-eslint-prettier",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"start:dev": "webpack-cli serve --mode=development --env development --open --hot",
+		"build": "webpack --mode=production --env production --progress",
+		"lint": "eslint './src/**/*.{ts,tsx}'",
+		"lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d build"
+	},
+	"devDependencies": {
+		"@types/node": "^15.0.1",
+		"@types/react": "^17.0.4",
+		"@types/react-dom": "^17.0.3",
+		"@types/styled-components": "^5.1.9",
+		"@types/webpack": "^5.28.0",
+		"@types/webpack-dev-server": "^3.11.3",
+		"@typescript-eslint/eslint-plugin": "^4.22.0",
+		"@typescript-eslint/parser": "^4.22.0",
+		"eslint": "^7.25.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-prettier": "^3.4.0",
+		"eslint-plugin-react": "^7.23.2",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"fork-ts-checker-webpack-plugin": "^6.2.5",
+		"gh-pages": "^3.1.0",
+		"html-webpack-plugin": "^5.3.1",
+		"prettier": "^2.2.1",
+		"ts-loader": "^9.1.1",
+		"ts-node": "^9.1.1",
+		"tsconfig-paths-webpack-plugin": "^3.5.1",
+		"typescript": "^4.2.4",
+		"webpack": "^5.36.1",
+		"webpack-cli": "^4.6.0",
+		"webpack-dev-server": "^3.11.2"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^1.2.35",
+		"@fortawesome/free-brands-svg-icons": "^5.15.3",
+		"@fortawesome/free-regular-svg-icons": "^5.15.3",
+		"@fortawesome/free-solid-svg-icons": "^5.15.3",
+		"@fortawesome/react-fontawesome": "^0.1.14",
+		"@material-ui/core": "^4.11.4",
+		"axios": "^0.21.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"styled-components": "^5.2.3"
+	}
 }
