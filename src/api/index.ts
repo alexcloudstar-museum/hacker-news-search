@@ -1,13 +1,18 @@
 import axios from 'axios';
 
-export const fetchTopStories = async (): Promise<any> => {
-	return await axios.get('//hacker-news.firebaseio.com/v0/topstories.json');
+export const fetchTopStories = async () => {
+	const res = await axios.get(
+		'https://hacker-news.firebaseio.com/v0/topstories.json'
+	);
+
+	return res.data;
 };
 
 export const fetchItem = async (id): Promise<any> => {
 	const res = await axios.get(
 		`//hacker-news.firebaseio.com/v0/item/${id}.json`
 	);
+
 	return res.data;
 };
 

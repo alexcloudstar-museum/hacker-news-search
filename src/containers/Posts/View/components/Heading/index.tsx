@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const StyledHeading = styled.h3`
@@ -7,6 +7,8 @@ const StyledHeading = styled.h3`
 	cursor: pointer;
 `;
 
-const Heading = (): JSX.Element => <StyledHeading>Post Title</StyledHeading>;
+const Heading: FC = ({ children }): JSX.Element => (
+	<StyledHeading>{children}</StyledHeading>
+);
 
 export default Heading;

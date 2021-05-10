@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const StyledSmallText = styled.p`
@@ -7,8 +7,8 @@ const StyledSmallText = styled.p`
 	cursor: pointer;
 `;
 
-const SmallText = (): JSX.Element => (
-	<StyledSmallText>4103 points</StyledSmallText>
+const SmallText: FC = ({ children }): JSX.Element => (
+	<StyledSmallText>{children}</StyledSmallText>
 );
 
 export default SmallText;

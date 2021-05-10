@@ -1,9 +1,9 @@
 import React from 'react';
 import GlobalStyles from './Theme/globalStyles';
-import { Header, SubHeader } from './shared/containers/';
+import { Header, SubHeader } from './containers';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './Theme/theme';
-import { BodyContent } from './shared/containers/';
+import { BodyContent } from './containers';
 
 const App = (): JSX.Element => (
 	<ThemeProvider theme={defaultTheme}>

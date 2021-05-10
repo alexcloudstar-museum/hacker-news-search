@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const StyledUrl = styled.span`
@@ -7,6 +7,8 @@ const StyledUrl = styled.span`
 	cursor: pointer;
 `;
 
-const Url = (): JSX.Element => <StyledUrl>(www.google.com)</StyledUrl>;
+const Url: FC = ({ children }): JSX.Element => (
+	<StyledUrl>{children}</StyledUrl>
+);
 
 export default Url;
