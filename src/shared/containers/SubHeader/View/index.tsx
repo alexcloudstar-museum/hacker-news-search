@@ -5,7 +5,6 @@ import {
 	searchByType,
 	searchByTime
 } from 'src/shared/components/CustomSelect/SelectPropsType';
-import { loadTime } from 'src/utils';
 import { SubHeaderCols, SubHeaderWrapper } from './style';
 
 const SubHeader = (): JSX.Element => {

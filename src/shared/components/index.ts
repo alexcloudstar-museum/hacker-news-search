@@ -4,4 +4,4 @@ export { default as IconWithText } from './IconWithText';
 export { default as Input } from './Input/View';
 export { default as CustomSelect } from './CustomSelect';
 export { default as ResultsLength } from './ResultsLength';
-export { default as Post } from './Post';
+export { default as Posts } from './Posts';
