@@ -45,6 +45,9 @@ table {
 	border-spacing: 0;
 }
 
+body {
+	margin: 50px;
+}
 `;
 
 export default GlobalStyles;

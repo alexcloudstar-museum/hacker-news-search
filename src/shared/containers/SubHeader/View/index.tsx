@@ -1,19 +1,47 @@
 import React from 'react';
-import { CustomSelect } from 'src/shared/components';
-import { searchByTypePosts } from 'src/shared/components/CustomSelect/SelectPropsType';
-import { SubHeaderWrapper } from './style';
+import { CustomSelect, ResultsLength } from 'src/shared/components';
+import {
+	searchByTypePosts,
+	searchByType,
+	searchByTime
+} from 'src/shared/components/CustomSelect/SelectPropsType';
+import { loadTime } from 'src/utils';
+import { SubHeaderCols, SubHeaderWrapper } from './style';
 
 const SubHeader = (): JSX.Element => {
 	return (
 		<SubHeaderWrapper>
-			<p>Search</p>
-			<CustomSelect
-				searchBy={[
-					searchByTypePosts.all,
-					searchByTypePosts.stories,
-					searchByTypePosts.comments
-				]}
-			/>
+			<SubHeaderCols>
+				<p>Search</p>
+				<CustomSelect
+					searchBy={[
+						searchByTypePosts.all,
+						searchByTypePosts.stories,
+						searchByTypePosts.comments
+					]}
+					defaultValue={searchByTypePosts.stories}
+				/>
+				<p>by</p>
+				<CustomSelect
+					searchBy={[searchByType.popularity, searchByType.date]}
+					defaultValue={searchByType.popularity}
+				/>
+				<p>by</p>
+				<CustomSelect
+					searchBy={[
+						searchByTime.allTime,
+						searchByTime.last24H,
+						searchByTime.pastWeek,
+						searchByTime.pastMonth,
+						searchByTime.pastYear,
+						searchByTime.customRange
+					]}
+					defaultValue={searchByTime.allTime}
+				/>
+			</SubHeaderCols>
+			<SubHeaderCols>
+				<ResultsLength />
+			</SubHeaderCols>
 		</SubHeaderWrapper>
 	);
 };

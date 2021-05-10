@@ -10,17 +10,18 @@ export enum searchByType {
 }
 
 export enum searchByTime {
-	allTime = 'allTime',
-	last24H = 'last24H',
-	pastWeek = 'pastWeek',
-	pastMonth = 'pastMonth',
-	pastYear = 'pastYear',
-	customRange = 'customRange'
+	allTime = 'all time',
+	last24H = 'last 24h',
+	pastWeek = 'past week',
+	pastMonth = 'past month',
+	pastYear = 'past year',
+	customRange = 'custom range'
 }
 
 interface SelectPropsType {
 	classes?: string;
 	searchBy: searchByTypePosts[] | searchByType[] | searchByTime[];
+	defaultValue: searchByTypePosts | searchByType | searchByTime;
 }
 
 export default SelectPropsType;

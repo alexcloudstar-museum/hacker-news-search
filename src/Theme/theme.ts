@@ -1,5 +1,14 @@
 import { DefaultTheme } from 'styled-components';
 export const defaultTheme: DefaultTheme = {
+	typography: {
+		sizes: {
+			xs: '14px',
+			sm: '16px',
+			md: '18px',
+			lg: '24px',
+			xl: '32px'
+		}
+	},
 	palette: {
 		common: {
 			black: '#222831',
