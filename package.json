@@ -1,6 +1,18 @@
 {
-	"name": "react-typescript-webpack-eslint-prettier",
-	"version": "1.0.0",
+	"name": "Hacker News Search",
+	"description": "Part of the series - 6 Fun React Project Ideas",
+	"version": "1.0.41",
+	"maintainers": [
+		{
+			"name": "Alex Cloudstar",
+			"email": "contact@alexcloudstar.com",
+			"web": "www.alexcloudstar.com"
+		}
+	],
+	"bugs": {
+		"web": "https://github.com/alexcloudstar/hacker-news-search/issues"
+	},
+	"homepage": "https://alexcloudstar.github.io/hacker-news-search/",
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
