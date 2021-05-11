@@ -1,7 +1,10 @@
 import React from 'react';
+import { usePostContext } from 'src/containers/Posts/Data/context/PostContext';
 
 const ResultsLength = (): JSX.Element => {
-	return <div>24,592,584 results</div>;
+	const { postItems } = usePostContext();
+
+	return <div>{postItems.length} results</div>;
 };
 
 export default ResultsLength;
