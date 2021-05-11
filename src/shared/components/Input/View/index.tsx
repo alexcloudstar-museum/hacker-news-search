@@ -17,7 +17,7 @@ const Input: FC<inputProps> = ({ state, onChange }): JSX.Element => {
 			<InputWrapper>
 				<TextField
 					id="standard-basic"
-					label="Search stories by title, url, or author"
+					label="Search stories by title"
 					value={state}
 					onChange={onChange}
 				/>

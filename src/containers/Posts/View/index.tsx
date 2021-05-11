@@ -19,6 +19,7 @@ const Posts = (): JSX.Element => {
 		<PostWrapper>
 			<>
 				{loading && <Loading />}
+				{!postItems.length && !loading && <div>No post found</div>}
 				{postItems.map(
 					({ by, descendants, id, kids, score, time, title, type, url }) => {
 						return (
