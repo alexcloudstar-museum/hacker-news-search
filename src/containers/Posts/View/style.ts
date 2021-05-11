@@ -4,5 +4,5 @@ import { Box } from '@material-ui/core';
 export const PostWrapper = styled(Box)`
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 `;
