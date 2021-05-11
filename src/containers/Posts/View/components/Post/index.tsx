@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import { PostItem } from 'src/containers/Posts/Data/types';
+import { PostItemType } from 'src/containers/Posts/Data/types';
 import Heading from '../Heading';
 import SmallText from '../SmallText';
 import Url from '../Url';
 import { FlexWrapper, StyledPostWrapper } from './style';
 
-const Post: FC<PostItem> = ({
+const Post: FC<PostItemType> = ({
 	title,
 	url,
 	score,

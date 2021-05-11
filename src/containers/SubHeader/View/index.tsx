@@ -13,11 +13,7 @@ const SubHeader = (): JSX.Element => {
 			<SubHeaderCols>
 				<p>Search</p>
 				<CustomSelect
-					searchBy={[
-						searchByTypePosts.all,
-						searchByTypePosts.stories,
-						searchByTypePosts.comments
-					]}
+					searchBy={[searchByTypePosts.stories]}
 					defaultValue={searchByTypePosts.stories}
 				/>
 				<p>by</p>

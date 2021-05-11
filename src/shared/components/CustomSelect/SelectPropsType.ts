@@ -1,7 +1,5 @@
 export enum searchByTypePosts {
-	all = 'all',
-	stories = 'stories',
-	comments = 'comments'
+	stories = 'stories'
 }
 
 export enum searchByType {
