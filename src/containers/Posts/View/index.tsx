@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useMemo } from 'react';
-import { fetchItem, getTopStories } from 'src/api';
+import React, { useCallback, useMemo } from 'react';
+import { getTopStories } from 'src/api';
 import { usePostContext } from '../Data/context/PostContext';
 import Post from './components/Post';
 import { PostWrapper } from './style';
