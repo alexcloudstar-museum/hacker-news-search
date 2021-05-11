@@ -7,12 +7,13 @@ interface useFetchPostsType {
 }
 
 const useFetchPosts = (): useFetchPostsType => {
-	const { setPostItems } = usePostContext();
+	const { setPostItems, setLoading } = usePostContext();
 
 	const fetchStories = useCallback(async () => {
 		const items = await getTopStories();
 		setPostItems(items);
-	}, [setPostItems]);
+		setLoading(false);
+	}, [setLoading, setPostItems]);
 
 	return { fetchStories };
 };

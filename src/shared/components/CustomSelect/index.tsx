@@ -8,8 +8,15 @@ import { StyledSelect } from './style';
 
 import { FormControl, MenuItem } from '@material-ui/core';
 import { capitalizeFirstLetter } from 'src/utils';
-import { usePostContext } from 'src/containers';
-import { filterByDate, filterByScore } from 'src/utils/filters';
+import { useFetchPosts, usePostContext } from 'src/containers';
+import {
+	filterByDate,
+	filterByScore,
+	filterByDay,
+	pastMonth,
+	pastWeek,
+	pastYear
+} from 'src/utils/filters';
 
 const CustomSelect: FC<SelectPropsType> = ({
 	classes,
@@ -18,6 +25,7 @@ const CustomSelect: FC<SelectPropsType> = ({
 }): JSX.Element => {
 	const [value, setValue] = useState(defaultValue);
 	const { postItems, setPostItems } = usePostContext();
+	const { fetchStories } = useFetchPosts();
 
 	const handleChange = (
 		e: ChangeEvent<{
@@ -33,6 +41,11 @@ const CustomSelect: FC<SelectPropsType> = ({
 
 		if (target === 'date') setPostItems(filterByDate(postItems));
 		if (target === 'popularity') setPostItems(filterByScore(postItems));
+		if (target === 'last 24h') setPostItems(filterByDay(postItems));
+		if (target === 'past week') setPostItems(pastWeek(postItems));
+		if (target === 'past month') setPostItems(pastMonth(postItems));
+		if (target === 'past year') setPostItems(pastYear(postItems));
+		if (target === 'all time') fetchStories();
 	};
 
 	return (
