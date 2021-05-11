@@ -1,4 +1,4 @@
-export interface PostItem {
+export interface PostItemType {
 	by: string;
 	descendants: number;
 	id: number;

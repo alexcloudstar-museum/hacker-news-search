@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { fetchItem } from 'src/api';
+import React, { useCallback, useEffect, useMemo } from 'react';
+import { fetchItem, getTopStories } from 'src/api';
 import { usePostContext } from '../Data/context/PostContext';
 import Post from './components/Post';
 import { PostWrapper } from './style';
@@ -7,12 +7,14 @@ import { PostWrapper } from './style';
 const Posts = (): JSX.Element => {
 	const { postItems, setPostItems } = usePostContext();
 
-	useEffect(() => {
-		(async () => {
-			const item = await fetchItem(8863);
-			setPostItems([item]);
-		})();
+	const fetchStories = useCallback(async () => {
+		const items = await getTopStories();
+		setPostItems(items);
 	}, [setPostItems]);
+
+	useMemo(() => {
+		fetchStories();
+	}, [fetchStories]);
 
 	return (
 		<PostWrapper>

@@ -19,7 +19,7 @@ export const fetchItem = async (id): Promise<any> => {
 export const getTopStories = async (): Promise<any> => {
 	const topstories = await fetchTopStories();
 	const items = await Promise.all(
-		topstories.data.slice(0, 100).map((id) => fetchItem(id))
+		topstories.slice(0, 100).map((id) => fetchItem(id))
 	);
 
 	return items.filter(Boolean);

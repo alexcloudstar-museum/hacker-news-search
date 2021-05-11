@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Box } from '@material-ui/core';
 
 export const StyledPostWrapper = styled(Box)`
+	margin: 10px 0;
 	h3 {
 		margin-right: 5px;
 	}
