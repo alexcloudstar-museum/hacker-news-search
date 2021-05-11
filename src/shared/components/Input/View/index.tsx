@@ -4,32 +4,21 @@ import { InputWrapper } from './style';
 import { TextField } from '@material-ui/core';
 import { useFetchPosts, usePostContext } from 'src/containers';
 
-const Input: FC = (): JSX.Element => {
-	const [value, setValue] = useState('');
-	const { postItems, setPostItems } = usePostContext();
-	const { fetchStories } = useFetchPosts();
+interface inputProps {
+	state: string;
+	onChange: (
+		e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+	) => void;
+}
 
-	const filteredList = () => {
-		const initialPosts = postItems.slice(0);
-		const filteredList = postItems.filter((post) => {
-			return post.title.toLowerCase().includes(value.toLowerCase());
-		});
-
-		value.length > 0 ? setPostItems(filteredList) : fetchStories();
-	};
-
-	const onChange = (e) => {
-		setValue(e.currentTarget.value);
-		filteredList();
-	};
-
+const Input: FC<inputProps> = ({ state, onChange }): JSX.Element => {
 	return (
 		<>
 			<InputWrapper>
 				<TextField
 					id="standard-basic"
 					label="Search stories by title, url, or author"
-					value={value}
+					value={state}
 					onChange={onChange}
 				/>
 			</InputWrapper>
