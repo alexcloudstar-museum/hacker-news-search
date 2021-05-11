@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react';
-import { PostItem } from '../types';
+import { PostItemType } from '../types';
 
 export type PostContextType = {
-	postItems: PostItem[];
+	postItems: PostItemType[];
 	setPostItems: (params: any) => void;
 };
 

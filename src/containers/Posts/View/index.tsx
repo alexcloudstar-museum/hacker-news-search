@@ -1,16 +1,14 @@
-import React, { useCallback, useMemo } from 'react';
-import { getTopStories } from 'src/api';
+import React, { useMemo } from 'react';
+import {} from 'src/api';
+import { useFetchPosts } from '..';
 import { usePostContext } from '../Data/context/PostContext';
+
 import Post from './components/Post';
 import { PostWrapper } from './style';
 
 const Posts = (): JSX.Element => {
-	const { postItems, setPostItems } = usePostContext();
-
-	const fetchStories = useCallback(async () => {
-		const items = await getTopStories();
-		setPostItems(items);
-	}, [setPostItems]);
+	const { postItems } = usePostContext();
+	const { fetchStories } = useFetchPosts();
 
 	useMemo(() => {
 		fetchStories();

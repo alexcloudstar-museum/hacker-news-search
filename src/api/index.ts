@@ -10,7 +10,7 @@ export const fetchTopStories = async () => {
 
 export const fetchItem = async (id): Promise<any> => {
 	const res = await axios.get(
-		`//hacker-news.firebaseio.com/v0/item/${id}.json`
+		`https://hacker-news.firebaseio.com/v0/item/${id}.json`
 	);
 
 	return res.data;
@@ -48,13 +48,11 @@ export const getStoryComments = async (id): Promise<any> => {
 	const story = await fetchItem(id);
 	let items;
 
-	if (story.kids) {
-		items = await Promise.all(
-			story.kids.slice(0, 100).map((id) => fetchItem(id))
-		);
-	} else {
-		return null;
-	}
+	items = story.kids
+		? (items = await Promise.all(
+				story.kids.slice(0, 100).map((id) => fetchItem(id))
+		  ))
+		: null;
 
 	return items;
 };
