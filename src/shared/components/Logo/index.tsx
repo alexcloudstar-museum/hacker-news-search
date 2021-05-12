@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { StyledLogo } from './style';
+import { LogoWrapper, StyledLogo } from './style';
 
 const Logo: FC = (): JSX.Element => (
-	<div>
-		<StyledLogo>Logo</StyledLogo>
-	</div>
+	<LogoWrapper>
+		<StyledLogo>Hacker News Search</StyledLogo>
+	</LogoWrapper>
 );
 
 export default Logo;

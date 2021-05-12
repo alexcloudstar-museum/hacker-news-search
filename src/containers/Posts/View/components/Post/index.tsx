@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { PostItemType } from 'src/containers/Posts/Data/types';
+import { truncateText } from 'src/utils/truncateText';
 import Heading from '../Heading';
 import SmallText from '../SmallText';
 import Url from '../Url';
@@ -16,7 +17,7 @@ const Post: FC<PostItemType> = ({
 	<StyledPostWrapper>
 		<FlexWrapper>
 			<Heading>{title}</Heading>
-			<Url>({url})</Url>
+			<Url>({truncateText(url, 50)})</Url>
 		</FlexWrapper>
 		<FlexWrapper>
 			<SmallText>{score} points</SmallText>
