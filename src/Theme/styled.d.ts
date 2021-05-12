@@ -24,5 +24,12 @@ declare module 'styled-components' {
 			primary: IPalette;
 			secondary: IPalette;
 		};
+		mediaQuery: {
+			xs: string;
+			sm: string;
+			md: string;
+			lg: string;
+			xl: string;
+		};
 	}
 }

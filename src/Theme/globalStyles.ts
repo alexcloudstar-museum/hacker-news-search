@@ -46,7 +46,10 @@ table {
 }
 
 body {
-	margin: 50px;
+	@media (min-width: ${({ theme }) => theme.mediaQuery.md}) {
+		margin: 50px;
+	}
+
 }
 `;
 

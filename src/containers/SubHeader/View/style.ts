@@ -19,7 +19,13 @@ export const SubHeaderCols = styled(Box)`
 	p {
 		font-size: ${({ theme }) => theme.typography.sizes.md};
 	}
+
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+
+	@media (min-width: ${({ theme }) => theme.mediaQuery.lg}) {
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
 `;

@@ -23,5 +23,12 @@ export const defaultTheme: DefaultTheme = {
 			main: '#6eb44b',
 			contrastText: '#ffffff'
 		}
+	},
+	mediaQuery: {
+		xs: '374px',
+		sm: '575px',
+		md: '767px',
+		lg: '991px',
+		xl: '1199px'
 	}
 };
