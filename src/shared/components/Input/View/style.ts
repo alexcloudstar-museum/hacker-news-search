@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const InputWrapper = styled.div`
-	width: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 
 	.Mui-focused label,
 	.MuiFormLabel-root {
@@ -16,6 +18,6 @@ export const InputWrapper = styled.div`
 
 	.MuiFormControl-root,
 	.MuiInputBase-root {
-		width: 100%;
+		/* width: 50%; */
 	}
 `;

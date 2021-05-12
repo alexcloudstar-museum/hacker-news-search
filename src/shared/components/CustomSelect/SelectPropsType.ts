@@ -12,8 +12,7 @@ export enum searchByTime {
 	last24H = 'last 24h',
 	pastWeek = 'past week',
 	pastMonth = 'past month',
-	pastYear = 'past year',
-	customRange = 'custom range'
+	pastYear = 'past year'
 }
 
 interface SelectPropsType {

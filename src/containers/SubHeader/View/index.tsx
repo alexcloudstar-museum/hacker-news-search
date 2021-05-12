@@ -28,8 +28,7 @@ const SubHeader = (): JSX.Element => {
 						searchByTime.last24H,
 						searchByTime.pastWeek,
 						searchByTime.pastMonth,
-						searchByTime.pastYear,
-						searchByTime.customRange
+						searchByTime.pastYear
 					]}
 					defaultValue={searchByTime.allTime}
 				/>
