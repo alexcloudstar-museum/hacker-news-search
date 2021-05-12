@@ -4,17 +4,18 @@ import { PostItemType } from '../types';
 
 export type PostContextType = {
 	postItems: PostItemType[];
-	setPostItems: (params: any) => void;
+	setPostItems: (params: PostItemType[]) => void;
 	loading: boolean;
-	setLoading: (params: any) => void;
+	setLoading: (params: boolean) => void;
 };
 
 export const PostContext = createContext<PostContextType>({
 	postItems: [],
 
-	setPostItems: (params: any) => {},
+	setPostItems: (params: PostItemType[]) => {},
 	loading: true,
-	setLoading: (params: any) => {}
+	setLoading: (params: boolean) => {}
 });
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const usePostContext = () => useContext(PostContext);

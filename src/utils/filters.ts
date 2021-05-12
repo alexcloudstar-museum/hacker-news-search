@@ -17,7 +17,7 @@ export const filterByScore = (posts: PostItemType[]): PostItemType[] => {
 	return sortedPosts;
 };
 
-export const filterByDay = (posts: PostItemType[]) => {
+export const filterByDay = (posts: PostItemType[]): PostItemType[] => {
 	const sortedPosts = posts.filter((post) => {
 		const lastDay = DateTime.local().plus({ day: -1 });
 
@@ -27,7 +27,7 @@ export const filterByDay = (posts: PostItemType[]) => {
 	return sortedPosts;
 };
 
-export const pastWeek = (posts: PostItemType[]) => {
+export const pastWeek = (posts: PostItemType[]): PostItemType[] => {
 	const sortedPosts = posts.filter((post) => {
 		const lastDay = DateTime.local().plus({ week: -1 });
 
@@ -37,7 +37,7 @@ export const pastWeek = (posts: PostItemType[]) => {
 	return sortedPosts;
 };
 
-export const pastMonth = (posts: PostItemType[]) => {
+export const pastMonth = (posts: PostItemType[]): PostItemType[] => {
 	const sortedPosts = posts.filter((post) => {
 		const lastDay = DateTime.local().plus({ month: -1 });
 
@@ -47,7 +47,7 @@ export const pastMonth = (posts: PostItemType[]) => {
 	return sortedPosts;
 };
 
-export const pastYear = (posts: PostItemType[]) => {
+export const pastYear = (posts: PostItemType[]): PostItemType[] => {
 	const sortedPosts = posts.filter((post) => {
 		const lastDay = DateTime.local().plus({ year: -1 });
 
